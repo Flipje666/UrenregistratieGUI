@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#handleOnMouseEnterMain" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ListView fx:id="taskList" layoutX="21.0" layoutY="150.0" onMouseClicked="#handleTaskSelect" prefHeight="140.0" prefWidth="100.0" />
+            <Label fx:id="mainProjectLabel" layoutX="240.0" layoutY="26.0" prefHeight="30.0" prefWidth="132.0">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font></Label>
+            <Label layoutX="21.0" layoutY="109.0" prefHeight="30.0" prefWidth="50.0" text="Taken">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="taskField" layoutX="252.0" layoutY="175.0" onAction="#handleWipeTaskField" />
+            <TextField fx:id="hourField" layoutX="252.0" layoutY="219.0" onAction="#handleWipeHourField"/>
+            <Label layoutX="133.0" layoutY="175.0" prefHeight="25.0" prefWidth="112.0" text="Geselecteerde taak:" />
+            <Label layoutX="157.0" layoutY="219.0" prefHeight="25.0" prefWidth="88.0" text="Gewerkte uren:" />
+            <VBox layoutX="271.0" layoutY="263.0" spacing="5.0">
+               <children>
+                  <Button fx:id="hourSaveButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Uren Toevoegen" onAction="#handleOnSaveClick" />
+                  <Button fx:id="hourEditButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Uren Wijzigen" onAction="#handleOnEditClick"/>
+                  <Button fx:id="hourDeleteButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Uren Verwijderen" onAction="#handleOnDeleteClick"/>
+               </children>
+            </VBox>
+            <ListView fx:id="hourList" layoutX="441.0" layoutY="150.0" onMouseClicked="#handleHourSelect" prefHeight="140.0" prefWidth="123.0" />
+            <Label layoutX="441.0" layoutY="116.0" text="Urenoverzicht">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mainMessageLabel" alignment="CENTER" layoutX="4.0" layoutY="56.0" prefHeight="44.0" prefWidth="590.0">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</FlowPane>

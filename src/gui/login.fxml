@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="218.0" prefWidth="533.0">
+        <children>
+            <Button fx:id="loginButton" layoutX="284.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="25.0" prefWidth="105.0" text="Inloggen" />
+            <Button fx:id="registerButton" layoutX="284.0" layoutY="179.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="25.0" prefWidth="105.0" text="Registreren" />
+            <TextField fx:id="usernameField" layoutX="105.0" layoutY="145.0" promptText="Gebruikersnaam" />
+            <PasswordField fx:id="passwordField" layoutX="104.0" layoutY="179.0" promptText="Wachtwoord" />
+            <Label layoutX="33.0" layoutY="24.0" text="Welkom!" />
+            <Label layoutX="33.0" layoutY="41.0" text="Voer uw gebruikersgegevens in om in te loggen." />
+            <Label layoutX="33.0" layoutY="58.0" text="Voor het registreren van een nieuw account vult u alleen een gebruikersnaam in." />
+            <Label fx:id="loginMessage" alignment="CENTER" layoutY="75.0" prefHeight="57.0" prefWidth="520.0">
+                <font>
+                <Font name="System Bold Italic" size="14.0" />
+                </font>
+            </Label>
+        </children></AnchorPane>
+</FlowPane>
